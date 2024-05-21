@@ -93,8 +93,9 @@ graph TD;
 
 
 ### yard_connection.conf - Section Configuration File.
-It is the file containing DPU in yard, sections under each DPU, DP's in each section.
-Syntax:- 
+
+	It is the file containing DPU in yard, sections under each DPU, DP's in each section.
+	Syntax:- 
 		{
 		"YARDS": [
 			{
