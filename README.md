@@ -16,7 +16,6 @@ graph TD;
     Source_code-->scc_dlm_model.py;
     Source_code-->scc_layout_model.py;
     Source_code-->scc_trail_trough.py;
-    Source_code-->trail_trough.py;
 ```
 ## SCC - Siding Control Centre Module.
 
