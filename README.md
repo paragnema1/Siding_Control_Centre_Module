@@ -94,7 +94,7 @@ graph TD;
 
 ### yard_connection.conf - yard Configuration File.
 
-	It is the file containing DPU in yard, sections under each DPU, DP's in each section.
+	It is the file containing DPU in the yard, sections under each DPU, and DP's in each section.
 	Syntax:- 
 	{
 	"YARDS": [
@@ -147,8 +147,12 @@ graph TD;
 
 ### main.py - main module for yard configuration and section information.
 
-### insert_conf.py - A module to take Siding Control Centre configuration insertion.
+### insert_conf.py - A module containing functions to convert (JSON files to Python) and (Python to JSON).
+Class SectonConfig:
+def read_cfg(self, file_name): function to convert JSON file to Python file.
+def print_cfg(self): function to convert Python file to JSON file.
 
-### insert_yard_conf.py - A module to take yard configuration insertion.
-
-### scc_log.py - module to set-up logging.
+### insert_yard_conf.py - A module containing functions to convert (JSON file to Python) and (python to JSON).
+Class SectonConfig:
+def read_cfg(self, file_name): function to convert JSON file to Python file.
+def print_cfg(self): function to convert Python file to JSON file.
