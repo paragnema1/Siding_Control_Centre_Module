@@ -173,17 +173,64 @@ We have created tables for LayoutSectionInfo, and LayoutSectionConnectionsInfo.
 
 ***class SccAPI:***
 **def connect_database(self, config):** - Connect passed argument file to postgresql database.
+
 **def get_user_roles(self, username_param):** - provide user role of passed username from OccUserInfo table.
+
 **def get_dpu_id(self, section_id_param):** - provide dpu id of passed section_id from YardConfig Table.
+
 **def insert_section_info(self, data):** - insert passed data into SectionInfo Table.
+
 **def insert_section_playback_info(self, data):** - saving passed data to section_playback_table.
+
 **def read_section_playback_info(self):** -log section_id and section_status from section_playback_table.
+
 **def insert_dp_info(self, data):** - insert passed data into dp_Info Table.
+
 **def select_section_info(self):** - Return all records from SectionInfo table.
+
 **def read_section_config_info(self):** - return all records from section_config_info table.
+
 **def read_yard_config_info(self):** - Return all records from yard_config_info table.
+
 **def read_section_connections_info(self):** - Return all records from the layout Section Connection table.
+
 **def reset_train_trace_info(self):** - Reset train_trace_obj_list.
+
+**def insert_train_trace_info(self, data):** - Add train trace info into train_trace_table iff in passed data (torpedo_axle_count is 16 and direction is in) OR (torpedo axle count is 0 and direction is out or none).
+
+**def init_section_connections_info(self):** - Store data from layoutSectionConnectionInfo into section_conn_obj_list and torpedo_obj_list.
+
+**def init_train_trace_info(self):** - ADD section id's from Section_trace_for_train_list to section_id variable in train_trace_obj_list.
+
+**def update_torpedo_id(self, data):** - update torpedo id in records of section_conn_obj_list from by matching section_id in passed data.
+
+**def torpedo_info_sub_fn(self, in_client, user_data, message):** - update torpedo id in records of section_conn_obj_list by calling “update torpedo id() ” function.
+
+**def reset_section_connections_info(self):** -reset all values of section variables in section_conn_obj_list.
+
+**def torpedo_performance(self, data):** - Update data into torpedo_obj_list only iff (passed data torpedo_axle_count is >= 12) OR (passed data torpedo_axle_count is < 6 and direction is Out).
+
+**def yard_performance(self, data):** - Update yard performance data.
+
+**def insert_torpedo_loaded_entry_info(self, torpedo_id, engine_id, unloaded_entry_time, unloaded_section_id):** - add engine_id, torpedo_id, unload_entry_ts, unload_section_id in torpedo_performance table.
+
+**def update_torpedo_unloaded_exit_info(self, torpedo_id, engine_id, unloaded_exit_time, unloaded_section_id):** - Update unload_exit_time and unload_section_id in torpedo_performance table.
+
+**def insert_train_entry_info(self, torpedo_id, engine_id, entry_time):** - add engine_id, torpedo_id, entry_ts in yard_performance table.
+
+**def update_train_exit_info(self, torpedo_id, engine_id, exit_time):** - Update torpedo_id and exit_time in yard_performance table.
+
+**def update_train_unloaded_entry_info(self, torpedo_id, engine_id, unloaded_entry_time, unloaded_section_id):** - Update torpedo_id, unload_entry_ts and unload_section_id in yard_performance table.
+
+**def update_train_unloaded_exit_info(self, torpedo_id, engine_id, unloaded_exit_time, unloaded_section_id):** - update torpedo_id, unload_exit_time and unload section_id in
+yard_performance table.
+
+**def insert_event_info(self, event_ts, event_id, event_desc):** - Add event_ts, event_id and event_desc in event_table.
+
+**def insert_trail_through_info(self, tt_msg):** - add time_stamp, section_id, confirm_status into trail through table & add time stamp and passed tt_msg to section_id in trail through playback table.
+
+**def clear_trail_through(self, tt_msg):** - Making last_tt_record_inserted[tt_msg['section_id']] = False and add time stamp and passed tt_msg to section_id in trail through playback table.
+**
 
 ### scc_trail_through.py - module to detect trail through and torpedo status.
 ***Class Sec:*** - Initialised Section Variables.
