@@ -136,6 +136,7 @@ graph TD;
 	
 
 ### scc_dlm_conf.py - module to load data (comment, version, lmb(local mqtt broker), scc_id) from configuration files.
+
 ***Class SccDlmConfRead:***
 
 **def read_cfg(self, file_name):** 
@@ -158,7 +159,8 @@ function to check if any data (comment, version, lmb(local mqtt broker), scc_id,
     DB_NAME: str
 
                     
-### scc_dlm_model.py - data logging module to store data in PostgreSQL.
+### scc_dlm_model.py - Module to create tables in the database. 
+We have created tables for SectionConfigInfo, DPInfo, SectionInfo, SecionPlaybackInfo, TrainTraceInfo, YardPerformanceInfo, TorpedoPerformanceInfo, YardConfigInfo, OccUserInfo, EventInfo, PointConfig, TrailThroughInfo, TrailThroughPlayback.
 
 ### scc_layout_model.py - data logging module for layout section data to store data in PostgreSQL.
 
