@@ -140,11 +140,11 @@ graph TD;
 	***Class SccDlmConfRead:***
 	**def read_cfg(self, file_name):**
  
-	Convert JSON file to python file.
-
-	Match this Python file with a Schema dictionary(a class object inside this Class) and validate it by 		calling the validate_cfg() function.
-
-	load data (comment, version, lmb(local mqtt broker), scc_id) from python file to Class DatabaseStruct 		class objects.
+		Convert JSON file to python file.
+	
+		Match this Python file with a Schema dictionary(a class object inside this Class) and validate it by 		calling the validate_cfg() function.
+	
+		load data (comment, version, lmb(local mqtt broker), scc_id) from python file to Class DatabaseStruct 		class objects.
 
 	**def validate_cfg(self):** 
 	
@@ -262,7 +262,7 @@ graph TD;
 	
 	***Class Yard:*** - Initialization of yard variables.	
 	***Class Section:*** - Initialization of section variables.	
-\	***Class Sccserver:***
+	***Class Sccserver:***
 	
 	**def init_section_info(self):** - Append section class object in section_obj_list & assign section id to each section.
 	
