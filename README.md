@@ -165,7 +165,7 @@ We have created tables for SectionConfigInfo, DPInfo, SectionInfo, SecionPlaybac
 ### scc_layout_model.py - Module to create tables in the database.
 We have created tables for LayoutSectionInfo, and LayoutSectionConnectionsInfo.
 
-### scc_dlm_api.py - data logging module to handle all API in scc website.
+### scc_dlm_api.py - Module dealing with all Database operations such as Select, Insert, Delete records.
 
 ***class TrainEntryExitTrace():*** - initializing Train entry and exit trace objects.
 ***class SectionConnections:*** - initializing Section Connection objects.
@@ -248,6 +248,23 @@ point_id from PointConfig table.
 **def construct_section_json_msg(self):** - return json_msg with key1 as "timestamp" & key2 as (object of tt_section_msg_list).
 
 ### main.py - main module for yard configuration and section information.
+***Class Point:*** - Initialization of point variables.
+
+***Class SectonConfig:***
+
+**def read_cfg(self, file_name):** function to convert JSON file to Python file.
+
+**def print_cfg(self):** function to convert Python file to JSON file.
+
+***Class Yard:*** - Initialization of yard variables.
+
+***Class Section:*** - Initialization of section variables.
+
+***Class Sccserver:***
+
+**def init_section_info(self):** - Append section class object in section_obj_list & assign section id to each section.
+
+**def cwsm_section_reset_sub_fn(self, in_client, user_data, message):** - publish section reset message and update event in event info table.
 
 ### insert_conf.py - A module containing functions to convert (JSON files to Python) and (Python to JSON).
 Class SectonConfig:
