@@ -266,6 +266,15 @@ point_id from PointConfig table.
 
 **def cwsm_section_reset_sub_fn(self, in_client, user_data, message):** - publish section reset message and update event in event info table.
 
+**def cwsm_dp_reset_sub_fn(self, in_client, user_data, message):** - Publish dp reset message and update the event in the event info table.
+
+**def check_user_roles(self, username):** - Method to get user permission by passing user name.
+
+**def section_reset_pub_fn(self, json_section_reset_msg_param):** - Publish section reset message.
+
+**def get_dp_list_of_section(self, section_id):** - Returns dp list of section by taking section id as argument.
+
+
 ### insert_conf.py - A module containing functions to convert (JSON files to Python) and (Python to JSON).
 Class SectonConfig:
 
