@@ -18,6 +18,8 @@ graph TD;
     Source_code-->scc_trail_trough.py;
 ```
 
+# Configuration Files
+
 ## [Configuration File](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Configuration_Files) - Files/settings that a program reads before startup.
 
 ## [Source Code File](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code) - Files containing sub-modules.
@@ -43,7 +45,9 @@ graph TD;
 ### [yard_connection.conf](https://github.com/paragnema1/Siding_Control_Centre_Module/blob/main/Configuration_Files/yard_config.conf) - yard Configuration File.
 
 	It is the file containing DPU in the yard, sections under each DPU, and DP's in each section.
-	
+
+
+# Source Code	
 
 ### scc_dlm_conf.py - module to load data (comment, version, lmb(local mqtt broker), scc_id) from configuration files.
 
