@@ -18,11 +18,13 @@ graph TD;
     Source_code-->scc_trail_trough.py;
 ```
 
-# Configuration Files
+
 
 ## [Configuration File](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Configuration_Files) - Files/settings that a program reads before startup.
 
 ## [Source Code File](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code) - Files containing sub-modules.
+
+# Configuration Files
 
 ### [SCC.conf](https://github.com/paragnema1/Siding_Control_Centre_Module/blob/main/Configuration_Files/scc.conf) - SCC configuration file contains:-
 
