@@ -20,9 +20,9 @@ graph TD;
 ```
 ## SCC - Siding Control Centre Module.
 
-## Configuration File - ###Files/settings that a program reads before startup.
+## Configuration File - Files/settings that a program reads before startup.
 
-## Source Code File - ###Files containing sub-modules.
+## Source Code File - Files containing sub-modules.
 
 ### SCC.conf - SCC configuration file contains:-
 
@@ -92,7 +92,7 @@ graph TD;
      }
 
 
-### yard_connection.conf - Section Configuration File.
+### yard_connection.conf - yard Configuration File.
 
 	It is the file containing DPU in yard, sections under each DPU, DP's in each section.
 	Syntax:- 
