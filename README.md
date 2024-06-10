@@ -136,7 +136,7 @@ graph TD;
 	
 
 ### scc_dlm_conf.py - module to load data (comment, version, lmb(local mqtt broker), scc_id) from configuration files.
-Class SccDlmConfRead:
+**Class SccDlmConfRead:**
 
 def read_cfg(self, file_name): 
 
@@ -150,7 +150,7 @@ def validate_cfg(self):
 
 function to check if any data (comment, version, lmb(local mqtt broker), scc_id, PROVIDER, USER, PASSWORD, HOST, DB_NAME) is not present, empty, or whitespace.
 
-class DatabaseStruct(NamedTuple):
+**class DatabaseStruct(NamedTuple):**
     PROVIDER: str
     USER: str
     PASSWORD: str
