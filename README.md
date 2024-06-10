@@ -137,23 +137,19 @@ graph TD;
 
 ### scc_dlm_conf.py - module to load data (comment, version, lmb(local mqtt broker), scc_id) from configuration files.
 
+	***Class SccDlmConfRead:***
 
+	**def read_cfg(self, file_name):** 
 
+	Convert JSON file to python file.
 
+	Match this Python file with a Schema dictionary(a class object inside this Class) and validate it by 		calling the validate_cfg() function.
 
-***Class SccDlmConfRead:***
+	load data (comment, version, lmb(local mqtt broker), scc_id) from python file to Class DatabaseStruct 		class objects.
 
-**def read_cfg(self, file_name):** 
-
-Convert JSON file to python file.
-
-Match this Python file with a Schema dictionary(a class object inside this Class) and validate it by calling the validate_cfg() function.
-
-load data (comment, version, lmb(local mqtt broker), scc_id) from python file to Class DatabaseStruct class objects.
-
-**def validate_cfg(self):** 
-
-function to check if any data (comment, version, lmb(local mqtt broker), scc_id, PROVIDER, USER, PASSWORD, HOST, DB_NAME) is not present, empty, or whitespace.
+	**def validate_cfg(self):** 
+	
+	function to check if any data (comment, version, lmb(local mqtt broker), scc_id, PROVIDER, USER, 		PASSWORD, HOST, DB_NAME) is not present, empty, or whitespace.
 
 ***Class DatabaseStruct(NamedTuple):***
     
