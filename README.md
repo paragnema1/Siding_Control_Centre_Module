@@ -20,7 +20,7 @@ graph TD;
 
 ## Configuration File - Files/settings that a program reads before startup.
 
-## Source Code File - Files containing sub-modules.
+## [Source Code File](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code) - Files containing sub-modules.
 
 ### SCC.conf - SCC configuration file contains:-
 
