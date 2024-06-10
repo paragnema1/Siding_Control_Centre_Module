@@ -18,11 +18,11 @@ graph TD;
     Source_code-->scc_trail_trough.py;
 ```
 
-## Configuration File - Files/settings that a program reads before startup.
+## [Configuration File](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Configuration_Files) - Files/settings that a program reads before startup.
 
 ## [Source Code File](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code) - Files containing sub-modules.
 
-### SCC.conf - SCC configuration file contains:-
+### [SCC.conf](https://github.com/paragnema1/Siding_Control_Centre_Module/blob/main/Configuration_Files/scc.conf) - SCC configuration file contains:-
 
     Comment- Description of file.
     Version - version of module.
@@ -32,7 +32,7 @@ graph TD;
     Total yard.
     Total Section.
 
-### Section.conf - Section Configuration File.
+### [Section.conf](https://github.com/paragnema1/Siding_Control_Centre_Module/blob/main/Configuration_Files/section.conf) - Section Configuration File.
 
     It is the file containing the Detection Point direction in section IN and section OUT of all data points in a section.
     Syntax:-
@@ -73,7 +73,7 @@ graph TD;
     }
 
 
-### Section_connection.conf - Section Configuration File.
+### [Section_connection.conf](https://github.com/paragnema1/Siding_Control_Centre_Module/blob/main/Configuration_Files/section_connections.conf) - Section Configuration File.
 
     It is the file containing the state/setting of the section in Left Normal, Right Normal, Left Reverse, Right Reverse.
     Syntax:-
@@ -90,7 +90,7 @@ graph TD;
      }
 
 
-### yard_connection.conf - yard Configuration File.
+### [yard_connection.conf](https://github.com/paragnema1/Siding_Control_Centre_Module/blob/main/Configuration_Files/yard_config.conf) - yard Configuration File.
 
 	It is the file containing DPU in the yard, sections under each DPU, and DP's in each section.
 	Syntax:- 
