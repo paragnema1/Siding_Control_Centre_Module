@@ -17,11 +17,6 @@ graph TD;
     Source_code-->scc_dlm_api.py;
     Source_code-->main.py;
 ```
-
-
-
-## [Source Code File](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code) - Files containing sub-modules.
-
 # [Configuration File](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Configuration_Files) - Files/settings that a program reads before startup.
 
 ### [SCC.conf](https://github.com/paragnema1/Siding_Control_Centre_Module/blob/main/Configuration_Files/scc.conf) - SCC configuration file contains:-
@@ -45,10 +40,8 @@ graph TD;
 ### [yard_connection.conf](https://github.com/paragnema1/Siding_Control_Centre_Module/blob/main/Configuration_Files/yard_config.conf) - yard Configuration File.
 
 	It is the file containing DPU in the yard, sections under each DPU, and DP's in each section.
-
-
-# Source Code	
-
+ 
+# [Source Code File](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code) - Directory containing sub-modules.
 ### [insert_conf.py](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code/Insert_Confuguration_File) - A module containing functions to convert (JSON files to Python) and (Python to JSON).
 	Class SectonConfig:
 	
