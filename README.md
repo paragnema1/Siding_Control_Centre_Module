@@ -156,5 +156,7 @@ def print_cfg(self): function to convert Python file to JSON file.
 
 ### insert_yard_conf.py - A module containing functions to convert (JSON file to Python) and (python to JSON).
 Class SectonConfig:
+
 def read_cfg(self, file_name): function to convert JSON file to Python file.
+
 def print_cfg(self): function to convert Python file to JSON file.
