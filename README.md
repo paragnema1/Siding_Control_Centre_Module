@@ -138,9 +138,8 @@ graph TD;
 ### scc_dlm_conf.py - module to load data (comment, version, lmb(local mqtt broker), scc_id) from configuration files.
 
 	***Class SccDlmConfRead:***
-
-	**def read_cfg(self, file_name):** 
-
+	**def read_cfg(self, file_name):**
+ 
 	Convert JSON file to python file.
 
 	Match this Python file with a Schema dictionary(a class object inside this Class) and validate it by 		calling the validate_cfg() function.
@@ -150,6 +149,7 @@ graph TD;
 	**def validate_cfg(self):** 
 	
 	function to check if any data (comment, version, lmb(local mqtt broker), scc_id, PROVIDER, USER, 		PASSWORD, HOST, DB_NAME) is not present, empty, or whitespace.
+
 
 	***Class DatabaseStruct(NamedTuple):***
     
@@ -163,30 +163,11 @@ graph TD;
 	    
 	    DB_NAME: str
 
-
-
-
-
-
-
-
-                    
 ### scc_dlm_model.py - Module to create tables in the database. 
 	We have created tables for SectionConfigInfo, DPInfo, SectionInfo, SecionPlaybackInfo, TrainTraceInfo, YardPerformanceInfo, TorpedoPerformanceInfo, YardConfigInfo, OccUserInfo, EventInfo, PointConfig, TrailThroughInfo, TrailThroughPlayback.
 
-
-
-
-
 ### scc_layout_model.py - Module to create tables in the database.
 	We have created tables for LayoutSectionInfo, and LayoutSectionConnectionsInfo.
-
-
-
-
-
-
-
 
 ### scc_dlm_api.py - Module dealing with all Database operations such as Select, Insert, Delete records.
 
@@ -254,13 +235,6 @@ graph TD;
 	
 	**def clear_trail_through(self, tt_msg):** - Making last_tt_record_inserted[tt_msg['section_id']] = False and add time stamp and passed tt_msg to section_id in trail through playback table.
 
-
-
-
-
-
-
-
 ### scc_trail_through.py - module to detect trail through and torpedo status.
 	***Class Sec:*** - Initialised Section Variables.
 	
@@ -276,27 +250,19 @@ graph TD;
 	
 	**def construct_section_json_msg(self):** - return json_msg with key1 as "timestamp" & key2 as (object of tt_section_msg_list).
 	
-	
-
-
-
-
-
-
 ### main.py - main module for yard configuration and section information.
 	***Class Point:*** - Initialization of point variables.
-	
+
+ 
 	***Class SectonConfig:***
 	
 	**def read_cfg(self, file_name):** function to convert JSON file to Python file.
 	
 	**def print_cfg(self):** function to convert Python file to JSON file.
 	
-	***Class Yard:*** - Initialization of yard variables.
-	
-	***Class Section:*** - Initialization of section variables.
-	
-	***Class Sccserver:***
+	***Class Yard:*** - Initialization of yard variables.	
+	***Class Section:*** - Initialization of section variables.	
+\	***Class Sccserver:***
 	
 	**def init_section_info(self):** - Append section class object in section_obj_list & assign section id to each section.
 	
@@ -335,16 +301,6 @@ graph TD;
 	**def tt_info_sub_fn(self, in_client, user_data, message):** - insert passed attribute message in “trail_through_info table” & “trail through playback table”.
 	
 	**def tt_clear_sub_fn(self, in_client, user_data, message):** - Clear trail through of section_id in passed attribute message and add info in trail_through_info table of scc_dlm_api.py
-	
-	
-	
-	
-	
-	
-	
-
-
-
 
 ### insert_conf.py - A module containing functions to convert (JSON files to Python) and (Python to JSON).
 	Class SectonConfig:
@@ -352,17 +308,6 @@ graph TD;
 	def read_cfg(self, file_name): function to convert JSON file to Python file.
 	
 	def print_cfg(self): function to convert Python file to JSON file.
-
-
-
-
-
-
-
-
-
-
-
 
 ### insert_yard_conf.py - A module containing functions to convert (JSON file to Python) and (python to JSON).
 	Class SectonConfig:
