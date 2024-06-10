@@ -158,12 +158,30 @@ function to check if any data (comment, version, lmb(local mqtt broker), scc_id,
     HOST: str
     DB_NAME: str
 
+
+
+
+
+
+
+
                     
 ### scc_dlm_model.py - Module to create tables in the database. 
 We have created tables for SectionConfigInfo, DPInfo, SectionInfo, SecionPlaybackInfo, TrainTraceInfo, YardPerformanceInfo, TorpedoPerformanceInfo, YardConfigInfo, OccUserInfo, EventInfo, PointConfig, TrailThroughInfo, TrailThroughPlayback.
 
+
+
+
+
 ### scc_layout_model.py - Module to create tables in the database.
 We have created tables for LayoutSectionInfo, and LayoutSectionConnectionsInfo.
+
+
+
+
+
+
+
 
 ### scc_dlm_api.py - Module dealing with all Database operations such as Select, Insert, Delete records.
 
@@ -230,7 +248,13 @@ yard_performance table.
 **def insert_trail_through_info(self, tt_msg):** - add time_stamp, section_id, confirm_status into trail through table & add time stamp and passed tt_msg to section_id in trail through playback table.
 
 **def clear_trail_through(self, tt_msg):** - Making last_tt_record_inserted[tt_msg['section_id']] = False and add time stamp and passed tt_msg to section_id in trail through playback table.
-**
+
+
+
+
+
+
+
 
 ### scc_trail_through.py - module to detect trail through and torpedo status.
 ***Class Sec:*** - Initialised Section Variables.
@@ -246,6 +270,13 @@ point_id from PointConfig table.
 **def find_torpedo_status(self, section_json_data):** - finding torpedo status by using objects of tt_sec_obj_list.
 
 **def construct_section_json_msg(self):** - return json_msg with key1 as "timestamp" & key2 as (object of tt_section_msg_list).
+
+
+
+
+
+
+
 
 ### main.py - main module for yard configuration and section information.
 ***Class Point:*** - Initialization of point variables.
@@ -304,12 +335,29 @@ point_id from PointConfig table.
 
 
 
+
+
+
+
+
+
 ### insert_conf.py - A module containing functions to convert (JSON files to Python) and (Python to JSON).
 Class SectonConfig:
 
 def read_cfg(self, file_name): function to convert JSON file to Python file.
 
 def print_cfg(self): function to convert Python file to JSON file.
+
+
+
+
+
+
+
+
+
+
+
 
 ### insert_yard_conf.py - A module containing functions to convert (JSON file to Python) and (python to JSON).
 Class SectonConfig:
