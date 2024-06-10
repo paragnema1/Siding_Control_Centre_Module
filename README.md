@@ -51,7 +51,7 @@ graph TD;
 
 # Source Code	
 
-### scc_dlm_conf.py - module to load data (comment, version, lmb(local mqtt broker), scc_id) from configuration files.
+### [scc_dlm_conf.py](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code/SCC_DLM_CONF) - module to load data (comment, version, lmb(local mqtt broker), scc_id) from configuration files.
 
 	***Class SccDlmConfRead:***
 	**def read_cfg(self, file_name):**
@@ -79,13 +79,13 @@ graph TD;
 	    
 	    DB_NAME: str
 
-### scc_dlm_model.py - Module to create tables in the database. 
+### [scc_dlm_model.py](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code/SCC_DLM_MODEL) - Module to create tables in the database. 
 	We have created tables for SectionConfigInfo, DPInfo, SectionInfo, SecionPlaybackInfo, TrainTraceInfo, YardPerformanceInfo, TorpedoPerformanceInfo, YardConfigInfo, OccUserInfo, EventInfo, PointConfig, TrailThroughInfo, TrailThroughPlayback.
 
-### scc_layout_model.py - Module to create tables in the database.
+### [scc_layout_model.py](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code/SCC_LAYOUT_MODEL) - Module to create tables in the database.
 	We have created tables for LayoutSectionInfo, and LayoutSectionConnectionsInfo.
 
-### scc_dlm_api.py - Module dealing with all Database operations such as Select, Insert, Delete records.
+### [scc_dlm_api.py](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code/SCC_DLM_API) - Module dealing with all Database operations such as Select, Insert, Delete records.
 
 	***class TrainEntryExitTrace():*** - initializing Train entry and exit trace objects.
 	***class SectionConnections:*** - initializing Section Connection objects.
@@ -151,7 +151,7 @@ graph TD;
 	
 	**def clear_trail_through(self, tt_msg):** - Making last_tt_record_inserted[tt_msg['section_id']] = False and add time stamp and passed tt_msg to section_id in trail through playback table.
 
-### scc_trail_through.py - module to detect trail through and torpedo status.
+### [scc_trail_through.py](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code/SCC_TRAIL_THROUGH) - module to detect trail through and torpedo status.
 	***Class Sec:*** - Initialised Section Variables.
 	
 	***Class Trailthrough:***
@@ -166,7 +166,7 @@ graph TD;
 	
 	**def construct_section_json_msg(self):** - return json_msg with key1 as "timestamp" & key2 as (object of tt_section_msg_list).
 	
-### main.py - main module for yard configuration and section information.
+### [main.py](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code/Main_File) - main module for yard configuration and section information.
 	***Class Point:*** - Initialization of point variables.
 
  
@@ -218,14 +218,14 @@ graph TD;
 	
 	**def tt_clear_sub_fn(self, in_client, user_data, message):** - Clear trail through of section_id in passed attribute message and add info in trail_through_info table of scc_dlm_api.py
 
-### insert_conf.py - A module containing functions to convert (JSON files to Python) and (Python to JSON).
+### [insert_conf.py](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code/Insert_Confuguration_File) - A module containing functions to convert (JSON files to Python) and (Python to JSON).
 	Class SectonConfig:
 	
 	def read_cfg(self, file_name): function to convert JSON file to Python file.
 	
 	def print_cfg(self): function to convert Python file to JSON file.
 
-### insert_yard_conf.py - A module containing functions to convert (JSON file to Python) and (python to JSON).
+### [insert_yard_conf.py](https://github.com/paragnema1/Siding_Control_Centre_Module/tree/main/Source_Code/Insert_yard_configuration) - A module containing functions to convert (JSON file to Python) and (python to JSON).
 	Class SectonConfig:
 	
 	def read_cfg(self, file_name): function to convert JSON file to Python file.
