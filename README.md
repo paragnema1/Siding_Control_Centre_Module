@@ -1,4 +1,4 @@
-# Siding_Control_Centre_Module
+# Siding_Control_Centre_Module - A Module of Cyber Signalling Software Architecture
 
 ```mermaid
 graph TD;
@@ -17,7 +17,6 @@ graph TD;
     Source_code-->scc_layout_model.py;
     Source_code-->scc_trail_trough.py;
 ```
-## Siding Control Centre Module. - A Module of Cyber Signalling Software Architecture
 
 ## Configuration File - Files/settings that a program reads before startup.
 
