@@ -156,10 +156,15 @@ load data (comment, version, lmb(local mqtt broker), scc_id) from python file to
 function to check if any data (comment, version, lmb(local mqtt broker), scc_id, PROVIDER, USER, PASSWORD, HOST, DB_NAME) is not present, empty, or whitespace.
 
 ***Class DatabaseStruct(NamedTuple):***
+    
     PROVIDER: str
+    
     USER: str
+    
     PASSWORD: str
+    
     HOST: str
+    
     DB_NAME: str
 
 
