@@ -274,6 +274,35 @@ point_id from PointConfig table.
 
 **def get_dp_list_of_section(self, section_id):** - Returns dp list of section by taking section id as argument.
 
+**def dp_reset_pub_fn(self, json_dp_reset_msg_param):** - Publish dp_reset message.
+
+**def fill_yard_config_info_from_db(self):** - fill yard config info in section_obj_list from from yard_config table.
+
+**def fill_section_connections_info_from_db(self):** - fill layout section connections info in section_obj_list from LayoutSectionConnectionsInfo table.
+
+**def get_section_status(self,section_id):** - get section status ( from section_obj_list) by passing section_id of that section.
+
+**def print_section_info(self):** - log section info from section_obj_list.
+
+**def construct_section_json_msg(self):** - return section_obj_list converted into json format.
+
+**def publish_section_info(self, mqtt_client, scc_api):** - Publish section_obj_list converted into json format through mqtt.
+
+**def evaluator_section_info_sub_fn(self, in_client, user_data, message):** - insert passed json message as attribute to (section info table, section playback info table and train trace info table) & publish trail through message ‘if any’.
+
+**def load_point_config(self):** - logging point configuration (point id and section id) from pointconfig table.
+
+**def point_info_sub_fn(self, in_client, user_data, message):** - loading row of passed attribute message for which its point id is equal to point id in point_obj_list.
+
+**def print_point_info(self):** - Print point info from point_obj_list.
+
+**def tt_info_sub_fn(self, in_client, user_data, message):** - insert passed attribute message in “trail_through_info table” & “trail through playback table”.
+
+**def tt_clear_sub_fn(self, in_client, user_data, message):** - Clear trail through of section_id in passed attribute message and add info in trail_through_info table of scc_dlm_api.py
+
+
+
+
 
 ### insert_conf.py - A module containing functions to convert (JSON files to Python) and (Python to JSON).
 Class SectonConfig:
