@@ -20,9 +20,9 @@ graph TD;
 ```
 ## SCC - Siding Control Centre Module.
 
-## Configuration File - Files/settings that a program reads before startup.
+## Configuration File - ###Files/settings that a program reads before startup.
 
-## Source Code File - Files containing sub-modules.
+## Source Code File - ###Files containing sub-modules.
 
 ### SCC.conf - SCC configuration file contains:-
 
