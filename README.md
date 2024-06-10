@@ -137,6 +137,10 @@ graph TD;
 
 ### scc_dlm_conf.py - module to load data (comment, version, lmb(local mqtt broker), scc_id) from configuration files.
 
+
+
+
+
 ***Class SccDlmConfRead:***
 
 **def read_cfg(self, file_name):** 
