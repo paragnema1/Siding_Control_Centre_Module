@@ -35,102 +35,14 @@ graph TD;
 ### [Section.conf](https://github.com/paragnema1/Siding_Control_Centre_Module/blob/main/Configuration_Files/section.conf) - Section Configuration File.
 
     It is the file containing the Detection Point direction in section IN and section OUT of all data points in a section.
-    Syntax:-
-    {
-    "SECTION":[
-    	{
-    	"SECTION_ID": "S1",
-    	"SECTION_IN":[
-    		{
-    		"DP_ID": "DP01",
-    		"DP_DIRECTION": "IN"
-    		},
-    		{
-    		"DP_ID": "DP02",
-    		"DP_DIRECTION": "OUT"
-    		},
-    		{
-    		"DP_ID": "DP03",
-    		"DP_DIRECTION": "OUT"
-    		}
-    		],
-    	"SECTION_OUT":[
-    		{
-    		"DP_ID": "DP01",
-    		"DP_DIRECTION": "OUT"
-    		},
-    		{
-    		"DP_ID": "DP02",
-    		"DP_DIRECTION": "IN"
-    		},
-    		{
-    		"DP_ID": "DP03",
-    		"DP_DIRECTION": "IN"
-    		}
-    		]
-    	}
-    	]
-    }
-
 
 ### [Section_connection.conf](https://github.com/paragnema1/Siding_Control_Centre_Module/blob/main/Configuration_Files/section_connections.conf) - Section Configuration File.
 
     It is the file containing the state/setting of the section in Left Normal, Right Normal, Left Reverse, Right Reverse.
-    Syntax:-
-    {
-	"SECTIONS": [
-			{
-			"SECTION_ID": "S1",
-			"LEFT_NORMAL": "NONE",
-			"RIGHT_NORMAL": "NONE",
-			"LEFT_REVERSE": "NONE",
-			"RIGHT_REVERSE": "NONE"
-			}
-		]
-     }
-
-
+    
 ### [yard_connection.conf](https://github.com/paragnema1/Siding_Control_Centre_Module/blob/main/Configuration_Files/yard_config.conf) - yard Configuration File.
 
 	It is the file containing DPU in the yard, sections under each DPU, and DP's in each section.
-	Syntax:- 
-	{
-	"YARDS": [
-		{
-		"YARD_ID" : 1,
-		"YARD_NAME" : "BHAUPUR_LOGICS",
-		"DPU": [
-			{
-			"DPU_ID": "DPU_01",
-			"DPU_NAME": "DPU_01",
-			"SECTIONS":[
-					{
-					"SECTION_ID": "S1",
-					"SECTION_NAME": "S1",
-					"DPS" : ["DP01"]
-					},
-					{
-					"SECTION_ID": "S2",
-					"SECTION_NAME": "S2",
-					"DPS" : ["DP01","DP02","DP03"]
-					},
-					{
-					"SECTION_ID": "S3",
-					"SECTION_NAME": "S3",
-					"DPS" : ["DP02"]
-					},	
-					{
-					"SECTION_ID": "S4",
-					"SECTION_NAME": "S4",
-					"DPS" : ["DP04","DP03","DP05"]
-					}											
-	
-				]
-			   }
-			]
-		   }
-		]
-	}
 	
 
 ### scc_dlm_conf.py - module to load data (comment, version, lmb(local mqtt broker), scc_id) from configuration files.
